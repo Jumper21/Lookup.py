@@ -35,7 +35,7 @@ Features
 * Export results to csv, xml and txt format.
 
 
-Geolocation Information
+IP location Information
 ====
 * ASN
 * City
@@ -61,13 +61,13 @@ usage: ipgeolocation.py [-h] [-m] [-t TARGET] [-T file] [-u User-Agent]
 
 Lookup.py V3
 
---[ Retrieve IP Geolocation information from ip-api.com
---[ Copyright (c) 2015-2016 maldevel (@maldevel)
---[ ip-api.com service will automatically ban any IP addresses doing over 150 requests per minute.
+-[ Retrieve IP Geolocation information from ip-api.com
+-[ Copyright (c) 2017-2018 Jumper 
+-[ ip-api.com service will automatically ban any IP addresses doing over 150 requests per minute.
 
 optional arguments:
   -h, --help            show this help message and exit
-  -m, --my-ip           Get Geolocation info for my IP address.
+  -m, --my-ip           Get IP location info of my IP address.
   -t TARGET, --target TARGET
                         IP Address or Domain to be analyzed.
   -T file, --tlist file
@@ -95,37 +95,37 @@ files with this option.
 Examples
 ====
 **Retrieve your IP Geolocation**
-* ./ip2geolocation.py -m
+* ./lookup.py -m
 
-**Retrieve IP Geolocation**
-* ./ip2geolocation.py -t x.x.x.x
+**Retrieve IP location**
+* ./lookup.py -t 0.0.0.0
 
 **Retrieve Domain Geolocation**
-* ./ip2geolocation.py -t example.com
+* ./lookup.py -t example.com
 
 **Do not save .log files**
-* ./ip2geolocation.py -t example.com --nolog
+* ./lookup.py -t example.com --nolog
 
 **Custom User Agent string** 
-* ./ip2geolocation.py -t x.x.x.x -u "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
+* ./lookup.py -t x.x.x.x -u "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 
 **Using Proxy**
-* ./ip2geolocation.py -t x.x.x.x -x http://127.0.0.1:8080
+* ./lookup.py -t x.x.x.x -x http://127.0.0.1:8080
 
 **Using random Proxy**
-* ./ip2geolocation.py -t x.x.x.x -X /path/to/proxies/filename.txt
+* ./lookup.py -t x.x.x.x -X /path/to/proxies/filename.txt
 
 **Pick User-Agent string randomly**
-* ./ip2geolocation.py -t x.x.x.x -U /path/to/user/agent/strings/filename.txt
+* ./lookup.py -t x.x.x.x -U /path/to/user/agent/strings/filename.txt
 
 **Retrieve IP geolocation and open location in Google maps with default browser**
-* ./ip2geolocation.py -t x.x.x.x -g
+* ./lookup.py -t x.x.x.x -g
 
 **Export results to CSV file**
-* ./ip2geolocation.py -t x.x.x.x --csv /path/to/results.csv
+* ./lookup.py -t x.x.x.x --csv /path/to/results.csv
 
 **Export results to XML file**
-* ./ip2geolocation.py -t x.x.x.x --xml /path/to/results.xml
+* ./lookup.py -t x.x.x.x --xml /path/to/results.xml
 
 **Export results to TXT file**
 * ./ip2geolocation.py -t x.x.x.x -e /path/to/results.txt
