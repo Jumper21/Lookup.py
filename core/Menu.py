@@ -49,8 +49,7 @@ banner = """
 
 
 
-""".format(Red('LOOKUP IP ' + __version__), Red('--['), green('"')
-
+""".format(Red('LOOKUP IP ' + __version__), Red('--['), __year__, __author__), green('" "')
 
 
 def checkFileRead(filename):
