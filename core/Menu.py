@@ -26,7 +26,7 @@
 """
 
 __author__   = 'Jumper'
-__version__  = 'V3'
+__version__  = 'V3 By Jumper'
 __year__     = '2016-2017'
 
 
@@ -34,25 +34,23 @@ from argparse import RawTextHelpFormatter
 import argparse, os
 from urllib.parse import urlparse
 from core.Logger import Red
+from core.Logger import green
 
 
 banner = """
 {0} 
 
 {1} "                                                                     "
-{1} "                                                                     "
-{1} "  ooooo ooooo  oooo oooo     oooo oooooooooo ooooooooooo oooooooooo  " 
-{1} "   888   888    88   8888o   888   888    888 888    88   888    888 "
-{1} "   888   888    88   88 888o8 88   888oooo88  888ooo8     888oooo88  "
-{1} "   888   888    88   88  888  88   888        888    oo   888  88o   " 
-{1} "   888    888oo88   o88o  8  o88o o888o      o888ooo8888 o888o  88o8 "
-{1} "8o888                                                                "
-{1} "                                                                     "
+{1} "                          _____________                              "
+{1} "  88888 _   _   _   _   _|             |_   _   _   _   _ 88888      "
+{1} "  00000<_>-<_>-<_>-<_>-<_| D R O I D S |_>-<_>-<_>-<_>-<_>00000      "
+{1} "  88888' `-' `-' `-' `-' |_____________| `-' `-' `-' `-' '88888      "
 {1} "                                                                     "
 
 
 
-""".format(Red('LOOKUP IP' + __version__), Red('--['), __year__, __author__)
+""".format(Red('LOOKUP IP ' + __version__), Red('--['), green('"')
+
 
 
 def checkFileRead(filename):
