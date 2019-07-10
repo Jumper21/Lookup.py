@@ -38,7 +38,7 @@ from core.Logger import Green
 
 
 
-Green(banner) = """
+banner = """
 {0} 
 
 {1}                                                                      
@@ -50,7 +50,7 @@ Green(banner) = """
 
 
 
-""".format(Red('LOOKUP IP ' + __version__), Red('--['), __year__, __author__)
+""".format(Red('LOOKUP IP ' + __version__), Red('--['), __year__, __author__), Green('banner')
 
 
 def checkFileRead(filename):
