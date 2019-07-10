@@ -2,7 +2,7 @@
 ====
 * A tool to retrieve IP location information
 * Powered by [ip-api](http://ip-api.com/docs/)
-
+* git clone https://github.com/Jumper21/Lookup.py.git
 
 Requirements
 =====
@@ -24,18 +24,18 @@ if pip3 is missing:
 
 Features
 ====
-* Retrieve IP or Domain Geolocation.
-* Retrieve your own IP Geolocation.
-* Retrieve Geolocation for IPs or Domains loaded from file. Each target in new line.
+* Retrieve IP or Domain location.
+* Retrieve your own IP location.
+* Retrieve location for IPs or Domains loaded from file. Each target in new line.
 * Define your own custom User Agent string.
 * Select random User-Agent strings from file. Each User Agent string in new line.
 * Proxy support.
 * Select random proxy from file. Each proxy URL in new line.
-* Open IP geolocation in Google Maps using the default browser.
+* Open IP location in Google Maps using the default browser.
 * Export results to csv, xml and txt format.
 
 
-IP location Information
+location Information
 ====
 * ASN
 * City
@@ -55,32 +55,32 @@ Usage
 ====
 ```
 $ ./lookup.py
-usage: ipgeolocation.py [-h] [-m] [-t TARGET] [-T file] [-u User-Agent]
+usage: lookup.py [-h] [-m] [-t TARGET] [-T file] [-u User-Agent]
                         [-U file] [-g] [--noprint] [-v] [--nolog] [-x PROXY]
                         [-X file] [-e file] [-ec file] [-ex file]
 
 Lookup.py V3
 
--[ Retrieve IP Geolocation information from ip-api.com
--[ Copyright (c) 2017-2018 Jumper 
+-[ Retrieve IP location information from ip-api.com
+-[ Copyright (c) 2016-2017 Jumper
 -[ ip-api.com service will automatically ban any IP addresses doing over 150 requests per minute.
 
 optional arguments:
   -h, --help            show this help message and exit
-  -m, --my-ip           Get IP location info of my IP address.
+  -m, --my-ip           Get location info for my IP address.
   -t TARGET, --target TARGET
                         IP Address or Domain to be analyzed.
   -T file, --tlist file
                         A list of IPs/Domains targets, each target in new line.
   -u User-Agent, --user-agent User-Agent
-                        Set the User-Agent request header (default: IP2GeoLocation 2.0.3).
+                        Set the User-Agent request header (default: lookup 2.0.3).
   -U file, --ulist file
                         A list of User-Agent strings, each string in new line.
   -g                    Open IP location in Google maps with default browser.
-  --noprint             IPGeolocation will print IP Geolocation info to terminal. It is possible to tell IPGeolocation n
+  --noprint             lookup will print IP location info to terminal. It is possible to tell lookup n
 ot to print results to terminal with this option.
   -v, --verbose         Enable verbose output.
-  --nolog               IPGeolocation will save a .log file. It is possible to tell IPGeolocation not to save those log
+  --nolog               lookup will save a .log file. It is possible to tell lookup not to save those log
 files with this option.
   -x PROXY, --proxy PROXY
                         Setup proxy server (example: http://127.0.0.1:8080)
@@ -94,47 +94,54 @@ files with this option.
 
 Examples
 ====
-**Retrieve your IP Geolocation**
+**Retrieve your IP location**
 * ./lookup.py -m
 
 **Retrieve IP location**
 * ./lookup.py -t 0.0.0.0
 
-**Retrieve Domain Geolocation**
+**Retrieve Domain location**
 * ./lookup.py -t example.com
 
 **Do not save .log files**
 * ./lookup.py -t example.com --nolog
 
 **Custom User Agent string** 
-* ./lookup.py -t x.x.x.x -u "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
+* ./lookup.py -t 0.0.0.0 -u "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko"
 
 **Using Proxy**
-* ./lookup.py -t x.x.x.x -x http://127.0.0.1:8080
+* ./lookup.py -t 0.0.0.0 -x http://127.0.0.1:8080
 
 **Using random Proxy**
-* ./lookup.py -t x.x.x.x -X /path/to/proxies/filename.txt
+* ./lookup.py -t 0.0.0.0 -X /path/to/proxies/filename.txt
 
 **Pick User-Agent string randomly**
-* ./lookup.py -t x.x.x.x -U /path/to/user/agent/strings/filename.txt
+* ./lookup.py -t 0.0.0.0 -U /path/to/user/agent/strings/filename.txt
 
-**Retrieve IP geolocation and open location in Google maps with default browser**
-* ./lookup.py -t x.x.x.x -g
+**Retrieve IP location and open location in Google maps with default browser**
+* ./lookup.py -t 0.0.0.0 -g
 
 **Export results to CSV file**
-* ./lookup.py -t x.x.x.x --csv /path/to/results.csv
+* ./lookup.py -t 0.0.0.0 --csv /path/to/results.csv
 
 **Export results to XML file**
-* ./lookup.py -t x.x.x.x --xml /path/to/results.xml
+* ./lookup.py -t 0.0.0.0 --xml /path/to/results.xml
 
 **Export results to TXT file**
-* ./ip2geolocation.py -t x.x.x.x -e /path/to/results.txt
+* ./lookup.py -t 0.0.0.0 -e /path/to/results.txt
 
-**Retrieve IP Geolocation for many targets**
-* ./ip2geolocation.py -T /path/to/targets/targets.txt
+**Retrieve IP location for many targets**
+* ./lookup.py -T /path/to/targets/targets.txt
 
-**Retrieve IP Geolocation for many targets and export results to xml**
-* ./ip2geolocation.py -T /path/to/targets/targets.txt --xml /path/to/results.xml
+**Retrieve IP location for many targets and export results to xml**
+* ./lookup.py -T /path/to/targets/targets.txt --xml /path/to/results.xml
 
 **Do not print results to terminal**
-* ./ip2geolocation.py -m -e /path/to/results.txt --noprint 
+* ./lookup.py -m -e /path/to/results.txt --noprint 
+
+
+Credit
+===
+Made By Jumper
+
+Discord: Jumper#7065
