@@ -38,7 +38,7 @@ from core.Logger import Green
 
 
 
-banner = """
+Green(banner) = """
 {0} 
 
 {1}                                                                      
