@@ -52,7 +52,7 @@ banner = """
 
 
 
-""".format(Red('IPGeolocation ' + __version__), Red('--['), __year__, __author__)
+""".format(Red('LOOKUP IP' + __version__), Red('--['), __year__, __author__)
 
 
 def checkFileRead(filename):

@@ -57,7 +57,7 @@ class FileExporter:
     def __ExportToTXT(self, ipGeoLocObjs, filename):
         try:
             with open(filename, 'w') as txtfile:
-                txtfile.write('Results IPGeolocation\n')
+                txtfile.write('Results Lookup\n')
                 for ipGeoLocObj in ipGeoLocObjs:
                     if ipGeoLocObj:
                         txtfile.write('Target: {}\n'.format(ipGeoLocObj.Query))
@@ -104,7 +104,7 @@ class FileExporter:
         try:
             with open(filename, 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
-                writer.writerow(['Results', 'IPGeolocation'])
+                writer.writerow(['Results', 'Lookup'])
                 for ipGeoLocObj in ipGeoLocObjs:
                     if ipGeoLocObj:
                         writer.writerow(['Target', ipGeoLocObj.Query])

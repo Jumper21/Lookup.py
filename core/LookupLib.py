@@ -254,12 +254,12 @@ class LookupLib:
             self.Logger.Print('User-Agent used: {}'.format(self.UserAgent))
             
             encoding = response.headers.get_content_charset()
-            ipGeoLocObj = IpGeoLocation(query, json.loads(response.read().decode(encoding)))
+            ipGeoLocObj = Lookup(query, json.loads(response.read().decode(encoding)))
             
             self.Logger.Print('Geolocation information has been retrieved for {}({}).'.format(query, ipGeoLocObj.IP))
             
             if not self.NoPrint:
-                self.Logger.PrintIPGeoLocation(ipGeoLocObj)
+                self.Logger.PrintLookup(ipGeoLocObj)
                 
             return ipGeoLocObj
 
