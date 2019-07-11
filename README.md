@@ -142,6 +142,6 @@ Examples
 
 Credit
 ===
-Made By Jumper
+* Made By Jumper
 
-Discord: Jumper#7065
+* Discord: Jumper#7065
